@@ -1,0 +1,352 @@
+Index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+/>
+<link rel="stylesheet" href="css/style.css" />
+<title>Student Registration Form</title>
+</head>
+<body>
+<main class="mt-5 pt-3">
+<div class="container">
+<div class="container-fluid px-4">
+<div class="row g-3 my-2">
+<div class="rounded">
+<div class="h1 my-4 text-center border">Add Student Form</div>
+<form id="studentForm">
+<div class="border p-3">
+<div class="row">
+<div class="col-md-6 mt-md-3 mt-3">
+<label>First Name</label>
+<input
+type="text"
+id="firstName"
+class="form-control"
+required
+/>
+</div>
+<div class="col-md-6 mt-md-3 mt-3">
+<label>Last Name</label>
+<input
+type="text"
+id="lastName"
+class="form-control"
+required
+/>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 mt-md-3 mt-3">
+<label>Birthday</label>
+<input
+type="date"
+id="dob"
+class="form-control"
+required
+/>
+</div>
+<div class="col-md-6 mt-md-3 mt-3">
+<label>Gender</label>
+<div class="d-flex align-items-center mt-2">
+<label class="option">
+<input type="radio" name="gender" value="male" />
+Male <span class="checkmark"></span>
+</label>
+<label class="option ms-4">
+<input type="radio" name="gender" value="female" />
+Female <span class="checkmark"></span>
+</label>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 mt-md-3 mt-3">
+<label>Email</label>
+<input
+type="email"
+id="email"
+class="form-control"
+required
+/>
+</div>
+<div class="col-md-6 mt-md-3 mt-3">
+<label>Phone Number</label>
+<input
+type="tel"
+id="contactNo"
+class="form-control"
+required
+/>
+</div>
+</div>
+<div class="my-md-3 my-3">
+<label>Branch</label>
+<select id="sub" required>
+<option value="" selected hidden>Choose Option</option>
+<option value="Maths">IT</option>
+<option value="Science">CSE</option>
+<option value="Social">Mechanical</option>
+<option value="Hindi">Civil</option>
+</select>
+</div>
+<div class="row">
+<div class="col-md-6 mt-md-3 mt-3">
+<label>Roll No</label>
+<input
+type="text"
+id="rollno"
+class="form-control"
+required
+/>
+</div>
+<div class="col-md-6 mt-md-3 mt-3">
+<label>Registration Date</label>
+<input
+type="date"
+id="registrationDate"
+class="form-control"
+required
+/>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 mt-md-3 mt-3">
+<label>Parent Name</label>
+<input
+type="text"
+id="parentName"
+class="form-control"
+required
+/>
+</div>
+<div class="col-md-6 mt-md-3 mt-3">
+<label>Parent Mobile No</label>
+<input
+type="tel"
+id="parentMobileNo"
+class="form-control"
+required
+/>
+</div>
+</div>
+<div class="d-grid mt-4">
+<button
+class="btn btn-primary btn-lg"
+id="btnAddStudent"
+type="button"
+>
+Add Student
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/jquery-3.5.1.js"></script>
+<script src="./js/myscript.js"></script>
+</body>
+</html>
+
+
+
+Displaydata.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+/>
+<link rel="stylesheet" href="css/style.css" />
+<title>Student Registration Form</title>
+</head>
+<body>
+<ul class="nav nav-tabs">
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="#">Active</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+aria-expanded="false">Dropdown</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="#">Action</a></li>
+<li><a class="dropdown-item" href="#">Another action</a></li>
+<li><a class="dropdown-item" href="#">Something else here</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a class="dropdown-item" href="#">Separated link</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Link</a>
+</li>
+<li class="nav-item">
+<a class="nav-link disabled">Disabled</a>
+</li>
+</ul>
+<main class="mt-5 pt-3">
+<div class="text-center">
+<i class="bi bi-emoji-smile fs-1 text-primary"></i>
+</div>
+<div class="container">
+<div class="h1 my-4 text-center border">Student Data</div>
+<div class="row my-5">
+<div class="card">
+<div class="card-header fw-bolder h5 text-uppercase">
+#Roll No - <span id="rollno">123</span>
+</div>
+<div class="card-body">
+<h5 class="card-title fw-bold text-uppercase">
+<span id="firstName">Devata</span>
+<span id="lastName">Anekar</span>
+</h5>
+<small class="text-uppercase fw-bold text-muted">
+Personal Information
+</small>
+<hr />
+<p class="card-text fs-6 fw-bold">
+<i class="bi bi-calendar-date me-2"></i>
+Date of Birth -<span id="dob">10/05/1988</span>
+</p>
+<p class="card-text fs-6 fw-bold">
+<i class="bi bi-gender-ambiguous me-2"></i>
+Gender -<span id="gender" class="text-uppercase">Female</span>
+</p>
+<small class="text-uppercase fw-bold text-muted">
+Contact Information
+</small>
+<hr />
+<p class="card-text fs-6 fw-bold">
+<i class="bi bi-envelope me-2"></i>
+Email -<span id="email">Email@gmail.com</span>
+</p>
+<p class="card-text fs-6 fw-bold">
+<i class="bi bi-telephone me-2"></i>
+Mobile No -<span id="contactNo">9871143434</span>
+</p>
+<small class="text-uppercase fw-bold text-muted">
+College Information
+</small>
+<hr />
+<p class="card-text fs-6 fw-bold">
+<i class="bi bi-book me-2"></i>
+Branch -<span id="branch">IT</span>
+</p>
+<p class="card-text fs-6 fw-bold">
+<i class="bi bi-calendar-date me-2"></i>
+Registration Date -<span id="registrationDate">Male</span>
+</p>
+<small class="text-uppercase fw-bold text-muted">
+Parent Information
+</small>
+<hr />
+<p class="card-text fs-6 fw-bold">
+<i class="bi bi-people me-2"></i>
+Parent Name -<span id="parentName">ABC</span>
+</p>
+<p class="card-text fs-6 fw-bold">
+<i class="bi bi-telephone me-2"></i>
+Parent Contact No -<span id="parentContactNo">356778888</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/jquery-3.5.1.js"></script>
+<script src="./js/display-data.js"></script>
+</body>
+</html>
+
+
+
+
+Css:
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+#sub {
+display: block;
+width: 100%;
+border: 1px solid #ddd;
+padding: 10px;
+border-radius: 5px;
+color: #333
+}
+#sub:focus {
+outline: none
+}
+
+
+
+Main.js
+$(document).ready(function () {
+// getData();
+$("#btnAddStudent").click(function () {
+//collect student data from student form
+function getStudentData() {
+let date = new Date($("#dob").val());
+day = date.getDate();
+month = date.getMonth() + 1; //jan - 0, feb-1, ...dec-11
+year = date.getFullYear();
+let dob = [day, month, year].join("/"); //28/01/2022
+let selectedDate = new Date($("#registrationDate").val());
+day = selectedDate.getDate();
+month = date.getMonth() + 1;
+year = date.getFullYear();
+let registrationDate = [day, month, year].join("/");
+let student = {
+firstName: $("#firstName").val(),
+lastName: $("#lastName").val(),
+dob: dob,
+gender: $("input[name='gender']:checked").val(),
+email: $("#email").val(),
+contactNo: $("#contactNo").val(),
+branch: $("#sub").find(":selected").text(),
+rollno: $("#rollno").val(),
+registrationDate: registrationDate,
+parentName: $("#parentName").val(),
+parentMobileNo: $("#parentMobileNo").val(),
+};
+$("#studentForm")[0].reset();
+return student;
+}
+//store student data to localStorage
+function storeDataToLocalStorage() {
+//The getItem() method of the Storage interface, when passed a key name, will return that
+key's value,
+//or null if the key does not exist, in the given Storage object.
+if (!localStorage.getItem("student")) {
+localStorage.setItem("student", JSON.stringify(getStudentData()));
+} else {
+localStorage.removeItem("student");
+localStorage.setItem("student", JSON.stringify(getStudentData()));
+}
+}
+//send data to server with AJAX request
+function sendData() {
+let xhr = new XMLHttpRequest();
+let data = JSON.stringify(getStudentData());
+xhr.open("POST", "http://localhost:4000/storedata",true);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.send(data);
+}
+//call storeDataToLocalStorage and sendData functions
+storeDataToLocalStorage();
+// sendData();
+window.location.href="display-data.html"
+});
+});
